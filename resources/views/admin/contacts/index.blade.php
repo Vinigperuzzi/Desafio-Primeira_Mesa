@@ -22,7 +22,7 @@
                 <tr>
                     <td>{{ $contact->nome }}</td>
                     <td>{{ $contact->email }}</td>
-                    <td><a href="{{ route('contacts.show', $contact->id) }}">Detalhes</a></td>
+                    <td><a href="{{ route('contacts.show', $contact->id) }}"><button>Detalhes</button></a></td>
                 </tr>
             @endforeach
     </tbody>

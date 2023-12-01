@@ -1,118 +1,100 @@
 @charset "UTF-8";
 
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
 }
 
 /* ELEMENTOS DA INTERFACE */
 
 body {
-    background-color: #15142b;
-    background-image: linear-gradient(180deg, #372991, #15142b);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-
+    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-}
-
-header, main, section, article {
-    max-width: 700px;
+    padding: 20px;
+    margin: 0;
 }
 
 header > h1 {
-    color: white;
-    text-shadow: 3px 3px 0px black;
+    color: #333;
+    text-shadow: 2px 2px 0px #888;
 }
 
 main, section, article {
-    background-color: white;
+    background-color: #fff;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    display: block;
-    width: 100vw;
-    background-color: #291f6c;
+    width: 100%;
+    background-color: #333;
     color: white;
     text-align: center;
-    margin-top: auto;
-    padding: 5px;
-}
-
-p {
-    text-align: justify;
-    line-height: 1.5em;
+    padding: 10px;
 }
 
 h2, h3, h4 {
-    color: #372991;
+    color: #333;
     margin: 0 0 10px 0;
 }
 
 a {
-    color: #15142b;
-    background-color: rgba(55, 41, 145, 0.1);
-    padding: 0 3px;
-    font-weight: 600;
+    color: #372991;
     text-decoration: none;
-    border-bottom: .5px dotted #372991;
+    border-bottom: 1px solid #372991;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
 a:hover {
-    color: #372991;
-    border-bottom: 1px solid #372991;
+    color: #291f6c;
+    border-bottom: 1px solid #291f6c;
 }
 
 /* TABELAS E LISTAS */
 
 table {
-    min-width: 400px;
-    border-spacing: 0px;
-    border: 0.5px solid #372991;
-    margin: 10px auto;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ccc;
+    margin: 10px 0;
 }
 
 table th {
     background-color: #372991;
     color: white;
-    padding: 5px;
+    padding: 10px;
     text-align: left;
 }
 
 table td {
-    padding: 5px;
+    padding: 10px;
 }
 
 table tr {
-    background-color: rgba(55, 41, 145, 0.05);
+    background-color: #f9f9f9;
 }
 
 table tr:nth-child(odd) {
-    background-color: rgba(55, 41, 145, 0.3);
+    background-color: #f1f1f1;
 }
 
 table.divisao {
-    border: 1px solid white;
+    border: 1px solid #ccc;
 }
 
 table.divisao td {
-    background-color: white;
+    background-color: #fff;
     padding: 20px;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 1.5em;
 }
 
-table.divisao  tr:nth-child(1) td:nth-child(2) {
+table.divisao tr:nth-child(1) td:nth-child(2) {
     border-bottom: 3px solid black;
     border-left: 3px solid black;
 }
@@ -125,114 +107,102 @@ table.divisao tr:nth-child(2) td:nth-child(1) {
     text-decoration: underline;
 }
 
-ul > li::marker {
-    color: #372991;
-}
-
 li {
-    color: rgb(151, 151, 117);
+    color: #555;
 }
 
 /* ELEMENTOS DE FORMULÁRIO */
 
 form {
-    background-color: rgba(55, 41, 145, 0.2);
+    background-color: #f4f4f4;
     padding: 15px;
     border-radius: 10px;
-    width: 30%;
-    color: beige;
+    width: 50%;
+    color: #333;
 }
 
 form label {
     display: block;
-    width: fit-content;
     font-size: 0.8em;
-    font-weight: 100;
-    background-color: rgba(55, 41, 145, 0.2);
-    padding: 3px 7px;
+    background-color: #f4f4f4;
+    padding: 5px;
     margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     border-radius: 5px;
 }
 
-input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week], input[type=textarea] {
+input[type=text],
+[type=number],
+select,
+[type=date],
+[type=date],
+[type=datetime],
+[type=email],
+[type=month],
+[type=password],
+[type=range],
+[type=tel],
+[type=time],
+[type=week],
+[type=textarea] {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px;
     font-size: 1em;
     margin: 8px 0;
-    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=submit],
+[type=reset],
+[type=button] {
     width: 100%;
-    background-color: #4CAF50;
     font-size: 1em;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px 0;
+    padding: 10px;
+    margin: 10px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
-  
-input[type=submit]:hover {
-    background-color: #45a049;
+
+input[type=submit]:hover,
+[type=reset]:hover,
+[type=button]:hover {
+    background-color: #001e19;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 30, 25, 0.2);
+}
+
+input[type=submit] {
+    background-color: #004d42;
+    color: white;
 }
 
 input[type=reset] {
-    width: 100%;
-    background-color: #eb9903;
-    font-size: 1em;
+    background-color: #a36200;
     color: white;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
-input[type=reset]:hover {
-    background-color: #c27013;
-}
-
-input[type=button], button {
-    width: 60%;
-    background-color: #372991;
-    font-size: 1em;
+input[type=button] {
+    background-color: #001e19;
     color: white;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 20%;
-}
-
-h1 button {
-    margin-left: 20%;
-    font-size: 0.5em;
-}
-
-input[type=button]:hover, button:hover {
-    background-color: #291f6c;
 }
 
 fieldset {
-    border: 0.5px dotted #372991;
+    border: 1px solid #ccc;
 }
 
 fieldset > legend {
-    font-size: 0.8em;
-    font-weight: 100;
-    background-color: rgba(55, 41, 145, 0.2);
-    padding: 3px 7px;
+    font-size: 1em;
+    background-color: #f4f4f4;
+    padding: 5px;
     border-radius: 5px;
 }
 
-input[type=radio] + label, input[type=checkbox] + label {
+input[type=radio] + label,
+input[type=checkbox] + label {
     display: inline-block;
     font-size: 1em;
     background-color: rgba(0, 0, 0, 0);
