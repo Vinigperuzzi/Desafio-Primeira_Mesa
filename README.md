@@ -26,8 +26,17 @@ With these steps already done, you just have to access the user interface of app
 
 And then is just navigate between the screens of the system.
 
+---
+# Screenshots:
+
+![main Page](./Screenshots/main.png)
+![Edit Page](./Screenshots/edit.png)
+![Creation Page](./Screenshots/insert.png)
+![details Page](./Screenshots/details.png)
+![Searching Page](./Screenshots/search.png)
 
 ---
+# Notes:
 
 Please, consider that the time for doing this software was very strict, and the css may not be the most beautiful, or the layout may not be the most delightful, but the folder organization, the follow of the conventions of MVC, and the structure of the project was taken seriously.
 
