@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/style-form.css') }}">
-<h1>Searching for $data</h1>
+<h1>Searching for: "{{ $nome}}" </h1>
 
 
 <table>

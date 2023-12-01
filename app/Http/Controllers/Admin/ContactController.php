@@ -78,9 +78,10 @@ class ContactController extends Controller
     public function filter(Request $request, Contact $contact)
     {
         $data = $request->only('nome');
-        $contacts = $contact->where('nome', 'like', $data['nome'] . '%')->get();
+        $nome = $data['nome'];
+        $contacts = $contact->where('nome', 'like', $nome . '%')->get();
 
-        return view('admin/contacts/search', compact('contacts')); 
+        return view('admin/contacts/search', compact('nome', 'contacts')); 
     }
 
 }
