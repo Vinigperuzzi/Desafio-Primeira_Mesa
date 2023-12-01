@@ -13,4 +13,17 @@ class ContactController extends Controller
         $contacts = $contact->all();
         return view('admin/contacts/index', compact('contacts'));    
     }
+
+    public function create(){
+
+        return view('admin/contacts/create');
+    }
+
+    public function store(Request $request, Contact $contact)
+    {
+        $data = $request->all();
+        $contact->create($data);
+
+        return redirect()->route('contacts.index');
+    }
 }
