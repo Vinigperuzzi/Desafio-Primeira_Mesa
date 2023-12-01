@@ -1,37 +1,79 @@
 # Contact List (Desafio-Primeira_Mesa)
-Desafio feito pela empresa Primeira Mesa para seleção de estagiário em novembro de 2023
+Challenge made by the company Primeira Mesa to select an intern in November 2023
 
 ---
 
-##How to run:
+## How to run:
+
+First you have to clone this repository
+
+> git clone https://github.com/Vinigperuzzi/Desafio-Primeira_Mesa.git
+
+Next, copy the .env.example file to .env 
+
+Windows (Powershell):
+
+> Copy-item .env.example .env
+
+Linux:
+
+> cp .env.example .env
+
+You have to update some configurations in .env, such as:
+
+```
+APP_NAME="Contact_List"
+APP_URL=http://localhost:8989
+
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=contact-list
+DB_USERNAME=root
+DB_PASSWORD=root
+
+CACHE_DRIVER=redis
+QUEUE_CONNECTION=redis
+SESSION_DRIVER=redis
+
+REDIS_HOST=redis
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+```
+
+Then you can up the containers with:
+
+> docker-compose up -d
+
+And then install the project's dependencies and generate the project's key. This must be done inside the container's terminal:
+
+> docker-compose exec app bash
+
+Wait for the terminal to open
+
+> composer install
+
+This could take a while
+
+> php artisan key:generate
+
+Now you can run the migration's files to create the tables in the new database:
+
+> php artisan migrate
+
+It may asks it you want to create the database, since it doesn't exists, so you can press y and let it create the database.
+If ypu have problem you may try:
+
+> mysql -u -root -root
+> CREATE DATABASE contact-list
+> exit (Para sair do mysql)
 
 
-You must have an PHP environment such as Laragon, or Xammp, or even up some container with Docker.<br>
+With this, you should be able to access the project Main UI in the localhost in the link below:
 
-Since you already have this environment, you have to configure your database connections with these information:
+> http://localhost:8989/contacts
 
-Create a database with the name: contact_list
-And set the collate as utf8mb4_unicode_ci
-
-
-Then you have to clone this repo to your php environment (www for laragon, htdocs for Xampp...), and then just run the command:
-
->php artisan migrate
-
-This command will create the table of contacts in your database.
-
-You may have problem with the .env file, that are not in this repo, cause obviously it refers to my system configuration, but you can run the command:
-
->composer create-project laravel/laravel Contact-List
-
-And then you can copy the .env file to the root of this project.
-In the final notes i refer to this problem and compromise myself to solve it with docker soon.
-
-With these steps already done, you just have to access the user interface of application that is at the localhost in:
-
->http://localhost/Contact-List/public/contacts
-
-And then is just navigate between the screens of the system.
+And that's it. Have fun!!
 
 ---
 # Screenshots:
@@ -42,10 +84,3 @@ And then is just navigate between the screens of the system.
 ![details Page](./Screenshots/detail.png)
 ![Searching Page](./Screenshots/search.png)
 
----
-# Notes:
-
-Please, consider that the time for doing this software was very strict, and the css may not be the most beautiful, or the layout may not be the most delightful, but the folder organization, the follow of the conventions of MVC, and the structure of the project was taken seriously.
-
-You may have some issues in trying to run this project in your local machine, cause it may have a lot of config the came together with the project creation with composer, such as
-Operating system, file management and other stuff like that. But here i compromise to refactor this code to a docker container, so it will be much more easy to run and experiment in your own system.
