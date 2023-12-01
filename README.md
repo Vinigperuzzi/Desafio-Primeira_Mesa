@@ -14,13 +14,20 @@ Create a database with the name: contact_list
 And set the collate as utf8mb4_unicode_ci
 
 
-Then you have to clone this repo to any folder you like, and then just run the command
+Then you have to clone this repo to your php environment (www for laragon, htdocs for Xampp...), and then just run the command:
 
 >php artisan migrate
 
 This command will create the table of contacts in your database.
 
-With these steps already done, you just have to access the user interface of application that is at the local host in:
+You may have problem with the .env file, that are not in this repo, cause obviously it refers to my system configuration, but you can run the command:
+
+>composer create-project laravel/laravel Contact-List
+
+And then you can copy the .env file to the root of this project.
+In the final notes i refer to this problem and compromise myself to solve it with docker soon.
+
+With these steps already done, you just have to access the user interface of application that is at the localhost in:
 
 >http://localhost/Contact-List/public/contacts
 
