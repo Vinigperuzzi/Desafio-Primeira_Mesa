@@ -5,11 +5,11 @@ Challenge made by the company Primeira Mesa to select an intern in November 2023
 
 ## How to run:
 
-First you have to clone this repository
+First you have to clone this repository:
 
 > git clone https://github.com/Vinigperuzzi/Desafio-Primeira_Mesa.git
 
-Next, copy the .env.example file to .env 
+Next, copy the .env.example file to .env.
 
 Windows (Powershell):
 
@@ -65,7 +65,9 @@ It may asks it you want to create the database, since it doesn't exists, so you 
 If ypu have problem you may try:
 
 > mysql -u -root -root
+
 > CREATE DATABASE contact-list
+
 > exit (Para sair do mysql)
 
 
