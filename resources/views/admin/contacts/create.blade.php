@@ -15,3 +15,5 @@
     <input type="textarea" placeholder="Nota" name="Nota" cols='30' rows='5'>
     <button type="submit">Criar</button>
 </form>
+
+<a href="{{ route('contacts.index') }}"><button>Voltar à lista</button></a>

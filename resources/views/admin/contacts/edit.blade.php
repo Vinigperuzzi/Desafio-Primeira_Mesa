@@ -16,3 +16,5 @@
     <input type="textarea" placeholder="Nota" name="Nota" cols='30' rows='5' value="{{ $contact->Nota }}">
     <button type="submit">Salvar alterações</button>
 </form>
+
+<a href="{{ route('contacts.index') }}"><button>Voltar à lista</button></a>

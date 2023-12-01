@@ -1,14 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/style-form.css') }}">
-<h1>List of contacts</h1>
-
-<form action="{{ route('contacts.filter') }}" method="get">
-    <input type="text" name="nome" placeholder="Search">
-    <button type="submit">Pesquisar</button>
-    <h1>
-        <button><a href="{{ route('contacts.create') }}">Criar novo contato</a></button>
-    </h1>
-</form>
-
+<h1>Searching for $data</h1>
 
 
 <table>
@@ -27,3 +18,5 @@
             @endforeach
     </tbody>
 </table>
+
+<a href="{{ route('contacts.index') }}"><button>Voltar à lista</button></a>
