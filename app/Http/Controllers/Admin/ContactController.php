@@ -14,7 +14,8 @@ class ContactController extends Controller
         return view('admin/contacts/index', compact('contacts'));    
     }
 
-    public function create(){
+    public function create()
+    {
 
         return view('admin/contacts/create');
     }
@@ -23,6 +24,53 @@ class ContactController extends Controller
     {
         $data = $request->all();
         $contact->create($data);
+
+        return redirect()->route('contacts.index');
+    }
+
+    public function show(string|int $id)
+    {
+        if (!$contact = Contact::find($id)){
+            return back();
+        }
+        return view('admin/contacts/show', compact('contact'));
+    }
+
+    public function edit(Contact $contact, string|int $id)
+    {
+        if (!$contact = $contact->find($id)){
+            return back();
+        }
+        return view('admin/contacts/edit', compact('contact'));
+    }
+
+    public function update(Request $request, Contact $contact, string $id)
+    {
+        if (!$contact = $contact->find($id)){
+            return back();
+        }
+        $contact->update($request->only(
+            'nome',
+            'email',
+            'CEP',
+            'Rua',
+            'Numero',
+            'Complemento',
+            'Bairro',
+            'Cidade',
+            'Estado',
+            'Nota'
+        ));
+
+        return redirect()->route('contacts.index');
+    }
+
+    public function destroy(string|int $id)
+    {
+        if (!$contact = Contact::find($id)){
+            return back();
+        }
+        $contact->delete();
 
         return redirect()->route('contacts.index');
     }

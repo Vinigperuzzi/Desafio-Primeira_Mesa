@@ -22,7 +22,7 @@ This command will create the table of contacts in your database.
 
 With these steps already done, you just have to access the user interface of application that is at the local host in:
 
->http://localhost/Desafio-Primeira_Mesa/Contact-List/public/contacts
+>http://localhost/Contact-List/public/contacts
 
 And then is just navigate between the screens of the system.
 

@@ -129,6 +129,10 @@ ul > li::marker {
     color: #372991;
 }
 
+li {
+    color: rgb(151, 151, 117);
+}
+
 /* ELEMENTOS DE FORMULÁRIO */
 
 form {
@@ -136,6 +140,7 @@ form {
     padding: 15px;
     border-radius: 10px;
     width: 30%;
+    color: beige;
 }
 
 form label {
