@@ -61,7 +61,7 @@ Now you can run the migration's files to create the tables in the new database:
 
 > php artisan migrate
 
-It may asks if you want to create the database, since it doesn't exists, so you can press y and let it create the database.
+It may asks if you want to create the database, since it doesn't exists, so you can press "y" and let it create the database.
 If you have problem you may try:
 
 > mysql -u -root -root
