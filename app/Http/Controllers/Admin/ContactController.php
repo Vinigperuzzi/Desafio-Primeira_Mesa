@@ -51,6 +51,7 @@ class ContactController extends Controller
         }
         $contact->update($request->only(
             'nome',
+            'telefone',
             'email',
             'CEP',
             'Rua',

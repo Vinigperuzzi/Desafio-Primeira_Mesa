@@ -37,9 +37,9 @@ And then is just navigate between the screens of the system.
 # Screenshots:
 
 ![main Page](./Screenshots/main.png)
+![Creation Page](./Screenshots/create.png)
 ![Edit Page](./Screenshots/edit.png)
-![Creation Page](./Screenshots/insert.png)
-![details Page](./Screenshots/details.png)
+![details Page](./Screenshots/detail.png)
 ![Searching Page](./Screenshots/search.png)
 
 ---

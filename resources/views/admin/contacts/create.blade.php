@@ -4,6 +4,7 @@
 <form action="{{ route('contacts.store') }}" method="POST">
     @csrf()
     <input type="text" placeholder="Nome" name="nome">
+    <input type="text" placeholder="Telefone" name="telefone">
     <input type="text" placeholder="E-mail" name="email">
     <input type="text" placeholder="CEP" name="CEP">
     <input type="text" placeholder="Rua" name="Rua">

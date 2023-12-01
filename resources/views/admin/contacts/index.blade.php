@@ -14,14 +14,14 @@
 <table>
     <thead>
         <th>Nome</th>
-        <th>E-mail</th>
+        <th>Telefone</th>
         <th>       </th>
     </thead>
     <tbody>
             @foreach ($contacts as $contact)
                 <tr>
                     <td>{{ $contact->nome }}</td>
-                    <td>{{ $contact->email }}</td>
+                    <td>{{ $contact->telefone }}</td>
                     <td><a href="{{ route('contacts.show', $contact->id) }}"><button>Detalhes</button></a></td>
                 </tr>
             @endforeach

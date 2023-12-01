@@ -3,6 +3,7 @@
 
 <ul>
     <li>Nome: {{ $contact->nome }}</li>
+    <li>Telefone: {{ $contact->telefone }}</li>
     <li>E-mail: {{ $contact->email }}</li>
     <li>CEP: {{ $contact->CEP }}</li>
     <li>Rua: {{ $contact->Rua }}</li>

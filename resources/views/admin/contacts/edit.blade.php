@@ -5,6 +5,7 @@
     @csrf()
     @method('PUT')
     <input type="text" placeholder="Nome" name="nome" value="{{ $contact->nome }}">
+    <input type="text" placeholder="Nome" name="telefone" value="{{ $contact->telefone }}">
     <input type="text" placeholder="E-mail" name="email" value="{{ $contact->email }}">
     <input type="text" placeholder="CEP" name="CEP" value="{{ $contact->CEP }}">
     <input type="text" placeholder="Rua" name="Rua" value="{{ $contact->Rua }}">
